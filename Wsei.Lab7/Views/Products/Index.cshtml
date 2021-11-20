@@ -1,8 +1,4 @@
 ﻿@model ProductModel
-@{
-    Layout = "_LayoutCustom";
-}
-
 <h1>Adding new product</h1>
 
 <form method="POST" asp-action="Add">
@@ -23,4 +19,4 @@
     </div>
 </form>
 
-@*<script src="~/js/addingProduct.js"></script>*@
+<partial name="_myCustomView" model=1/>
