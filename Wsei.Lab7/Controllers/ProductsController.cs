@@ -60,5 +60,14 @@ namespace Wsei.Lab7.Controllers
 
             return View(viewModel);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id=1)
+        {
+            IQueryable<ProductEntity> productsQuery = _dbContext.Products;
+            productsQuery = productsQuery.Where(x => x.Id == id);
+            var products = await productsQuery.ToListAsync();
+            return View(products);
+        }
     }
 }

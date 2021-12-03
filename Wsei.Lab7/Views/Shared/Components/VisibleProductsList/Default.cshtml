@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Wsei.Lab7.Entities.ProductEntity>
+
+<h3>Visible products:</h3>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name</li>
+    }
+</ul>

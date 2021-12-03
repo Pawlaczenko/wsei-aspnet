@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Wsei.Lab7.Entities.ProductEntity>
+
+<h2>Product details</h2>
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>Id</td>
+                <td>@item.Id</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>@item.Name</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>@item.Description</td>
+            </tr>
+            <tr>
+                <td>IsVisible</td>
+                <td>@(item.IsVisible?"YES":"NO")</td>
+            </tr>
+        }
+    </tbody>
+</table>

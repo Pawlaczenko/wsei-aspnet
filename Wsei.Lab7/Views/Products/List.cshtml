@@ -13,17 +13,19 @@
             <th>Name</th>
             <th>Description</th>
             <th>Is visible?</th>
+            <th>More details</th>
         </tr>
     </thead>
 
     <tbody>
-        @foreach(var item in Model)
-            {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>@item.Name</td>
             <td>@item.Description</td>
-            <td>@(item.IsVisible?"Yes":"No")</td>
-        </tr>
+            <td>@(item.IsVisible ? "Yes" : "No")</td>
+            <td><a href="/Products/Details/@(item.Id)">Show more</a></td>
+</tr>
             }
     </tbody>
 </table>
